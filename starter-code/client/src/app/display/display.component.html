@@ -1,0 +1,24 @@
+<div>
+<label for="dishes-name"></label>Dish Name
+<input type="text" [(ngModel)]="newDishes.name">
+</div>
+
+<div>
+<label for="dishes-image"></label>Image
+<input type="text" [(ngModel)]="newDishes.image">
+</div>
+
+<div>
+<label for="dishes-description"></label>Description
+<input type="text" [(ngModel)]="newDishes.description">
+</div>
+
+
+<ul><!-- Is better to put the *ngFor on the UL-->
+<li *ngFor="let display of displays">
+  <h2>{{display.name}}</h2>
+  <img src="{{display.image}}" width="100px"/>
+  <h2>{{display.description}}</h2>
+</li>
+</ul>
+
